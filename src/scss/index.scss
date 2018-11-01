@@ -1,0 +1,38 @@
+@import "common.scss";
+@import "mixin.scss";
+* {
+    @include sizing;
+}
+
+html,
+body,
+.wrap {
+    @include num(100%, 100%);
+}
+
+.wrap {
+    @include box_flex;
+    @include direction(column);
+}
+
+.list {
+    @include num(100%, pxTorem(40px));
+    @include box_flex;
+    li {
+        flex: 1;
+        @include boxFlex(center, center);
+        @include direction(column);
+    }
+    .active {
+        background: pink
+    }
+}
+
+.swiper-container {
+    flex: 1;
+    width: 100%;
+    .swiper-wrapper,
+    .swiper-slide {
+        @include num(100%, 100%);
+    }
+}
